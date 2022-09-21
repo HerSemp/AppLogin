@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_potrait">
+
+    <TextView
+        android:id="@+id/tx_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/container1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="5dp"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="1">
+
+        <TextView
+            android:id="@+id/tx_looks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looks like you don't have an account. Let's Create a new account for "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tx_looks2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jane.doe@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tx_looks"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:alpha="1"
+            android:autofillHints="name"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/tx_looks2"/>
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:alpha="1"
+            android:autofillHints="emailAddress"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/ed_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/tx_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_password"
+            android:text="By selecting Agree and continue below, I agree to"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tx_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_terms"
+            android:text="Terms of service and privacy policy."
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#02cfaa"/>
+        <Button
+            android:id="@+id/bt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tx_forgot"
+            android:backgroundTint="#02cfaa"
+            android:text="Agree and Continue"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
